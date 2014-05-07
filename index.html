@@ -1,0 +1,187 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Aplic. Web de jQuery Mobile</title>
+<link href="file:///C|/Program%20Files%20(x86)/Adobe/Adobe%20Dreamweaver%20CS6/es_ES/Configuration/Third%20Party%20Source%20Code/jquery-mobile/jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="file:///C|/Program%20Files%20(x86)/Adobe/Adobe%20Dreamweaver%20CS6/es_ES/Configuration/Third%20Party%20Source%20Code/jquery-mobile/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="file:///C|/Program%20Files%20(x86)/Adobe/Adobe%20Dreamweaver%20CS6/es_ES/Configuration/Third%20Party%20Source%20Code/jquery-mobile/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+		<h1>IMC</h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview">
+			<li><a href="#page2">HOMBRE</a></li>
+            <li><a href="#page3">MUJER</a></li>
+			<li><a href="#page4">ACERCA DE</a></li>
+		</ul>		
+	</div>
+	<div data-role="footer">
+		<h4>HECHO EN MEXICO POR: DIVID , JESSHUA</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page2">
+<div data-role="header">
+		<h1>HOMBRE</h1>
+	</div>
+	<div data-role="content">	
+		<body>
+<h3> PESO (Kg)</h3>
+<input type="text" name="h" id="h" onclick="this.value='';">
+<h3> ESTATURA (Mts)</h3>
+<input type="text" name="k" id="k" onclick="this.value='';">
+<h3> IMC</h3>
+<h3>
+  <input name="l" type="text" id="l" onclick="this.value='';" readonly>
+</h3>
+  <p>
+    <input type="submit" name="res" id="res" value="CALCULAR" onclick="calc(this.value)">
+  </p>
+<script type="text/javascript" language="javascript0">
+function calc()
+{
+	pes=document.getElementById("h").value;
+	estatur=document.getElementById("k").value;
+	im=pes/(estatur*estatur);
+	document.getElementById('l').value = "tu IMC es:" + im ;
+if(im<18.5)
+{
+     alert("BAJO DE PESO !!! \n SE RECOMIENDA CONSULTAR A SU DOCTOR URGENTEMENTE! O COMER MAS");
+}
+else
+{
+	if(im>=18.5 && im<25)
+	{
+		alert("PESO NORMAL!!! \n SIGUE CON TU DIETA DIARIA");
+	}
+	else
+	{
+		if(im>=25 && im<30)
+		{
+			alert("SOBREPESO!!! \n SE RECOMIENDA BAJARLE A LAS GRASAS ADQUIRIDAS AL CUERPO E HACER EJERCICIO");
+		}
+		else
+		{
+			if(im>=30 && im<35)
+			{
+				alert("OBESIDAD GRADO 1!!! \n SE RECOMIENDA BAJARLE MUCHO A GRASAS ADQUIRIDAS AL CUERPO \n POSIBILIDAD DE INFARTO DE CORAZON");
+			}
+			else
+			{
+				if(im>=35 && im<40)
+				{
+					alert("OBESIDAD GRADO 2!!! \n SE RECOMIENDA ACUDIR A SU DOCTOR URGENTEMENTE ANTES DE SUFRIR INFARTO!!!");
+				}
+				else
+				{
+					if(im>=40)
+					{
+						alert("OBESIDAD GRADO 3!!! \n IR AL DOCTOR HOY MISMO YA QUE HAY DEMASIADAS POSIBILIDADES DE SUFRIR UN INFARTO");
+					}
+				}
+			}
+		}
+	}
+}
+}
+</script>
+</body>		
+	</div>
+	<div data-role="footer">
+		<h4>HECHO EN MEXICO POR: DIVID , JESSHUA</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page3">
+	<div data-role="header">
+		<h1>MUJER</h1>
+	</div>
+	<div data-role="content">	
+		<body>
+<h3> PESO (Kg)</h3>
+<input type="text" name="p" id="p" onclick="this.value='';">
+<h3> ESTATURA (Mts)</h3>
+<input type="text" name="e" id="e" onclick="this.value='';">
+<h3> IMC</h3>
+<input type="text" name="i" id="i" onclick="this.value='';"readonly>
+<input type="submit" name="muj" id="muj" value="CALCULAR" onClick="calcu(this.Value)">
+
+<script type="text/javascript" language="javascript">
+function calcu()
+{
+	peso=document.getElementById("p").value;
+	estatura=document.getElementById("e").value;
+	imc=peso/(estatura*estatura);
+	document.getElementById('i').value = "tu IMC es:" + imc ;
+if(imc<18)
+{
+     alert("BAJO DE PESO !!! \n SE RECOMIENDA CONSULTAR A SU DOCTOR URGENTEMENTE!");
+}
+else
+{
+	if(imc>=18 && imc<25)
+	{
+		alert("PESO NORMAL!!! \n SIGUE CON TU DIETA DIARIA");
+	}
+	else
+	{
+		if(imc>=25 && imc<27)
+		{
+			alert("SOBREPESO!!! \n SE RECOMIENDA BAJARLE A LAS GRASAS ADQUIRIDAS AL CUERPO");
+		}
+		else
+		{
+			if(imc>=27 && imc<30)
+			{
+				alert("OBESIDAD GRADO 1!!! \n SE RECOMIENDA BAJARLE MUCHO A GRASAS ADQUIRIDAS AL CUERPO \n POSIBILIDAD DE INFARTO DE CORAZON");
+			}
+			else
+			{
+				if(imc>=30 && imc<40)
+				{
+					alert("OBESIDAD GRADO 2!!! \n SE RECOMIENDA ACUDIR A SU DOCTOR URGENTEMENTE ANTES DE SUFRIR INFARTO DE CORAZON!!!");
+				}
+				else
+				{
+					if(imc>=40)
+					{
+						alert("OBESIDAD GRADO 3!!! \n IR AL DOCTOR HOY MISMO YA QUE HAY DEMASIADAS POSIBILIDADES DE SUFRIR UN INFARTO DE CORAZON");
+					}
+				}
+			}
+		}
+	}
+}
+}
+</script>
+</body>		
+	</div>
+	<div data-role="footer">
+		<h4>HECHO EN MEXICO POR: DIVID , JESSHUA</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page4">
+	<div data-role="header">
+		<h1>INFORMACIÓN</h1>
+	</div>
+	<div data-role="content">	
+		El índice de masa corporal (IMC) es una medida de asociación entre el peso y la talla de un individuo ideada por el estadístico belga Adolphe Quetelet, por lo que también se conoce como índice de Quetelet.<br>
+La masa o peso se expresa en kilogramos y la estatura en metros, siendo la unidad de medida del IMC en el sistema MKS.<br>
+El valor obtenido no es constante, sino que varía con la edad y el sexo. También depende de otros factores, como las proporciones de tejidos muscular y adiposo. En el caso de los adultos se ha utilizado como uno de los recursos para evaluar su estado nutricional, de acuerdo con los valores propuestos por la Organización Mundial de la Salud.	<a href= "http://es.wikipedia.org/wiki/%C3%8Dndice_de_masa_corporal">
+<h4>Mas informacion, Clic Aqui</h4></a>
+
+	
+	</div>
+	<div data-role="footer">
+		<h4>HECHO EN MEXICO POR: DIVID , JESSHUA</h4>
+	</div>
+</div>
+
+</body>
+</html>
